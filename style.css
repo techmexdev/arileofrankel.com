@@ -1,8 +1,14 @@
   html {
     box-sizing: border-box;
     font-family:'helvetica neue';
-    font-size: 26px;
+    font-size: 18px;
     font-weight: 200;
+  }
+
+  @media (min-width: 1100px) {
+    html{
+      font-size: 24px;
+    }
   }
 
   body {
