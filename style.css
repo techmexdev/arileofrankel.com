@@ -42,7 +42,7 @@
   }
 
   .panel {
-    height: 100vh;
+    min-height: 100vh;
     padding: 10%;
     text-align: center;
     display: -ms-flexbox;
@@ -52,6 +52,7 @@
     -webkit-align-items: center;
     -webkit-box-align: center;
     align-items: center;
+    overflow: auto;
   }
 
   .panel img {
