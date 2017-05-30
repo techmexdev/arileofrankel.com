@@ -1,189 +1,204 @@
-  html {
-    box-sizing: border-box;
-    font-family:'helvetica neue';
-    font-size: 18px;
-    font-weight: 200;
+html {
+  box-sizing: border-box;
+  font-family:'helvetica neue';
+  font-size: 18px;
+  font-weight: 200;
+}
+
+@media (min-width: 1100px) and (min-height: 800px) {
+  html{
+    font-size: 24px;
+  }
+}
+
+h1, h2, h3, h4 {
+  margin: 0;
+}
+
+body {
+  margin: 0;
+  position: relative;
+}
+
+ ul {
+  list-style-type: none;
+  display: inline-block;
+  padding: 0px;
+}
+
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+a {
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.site-wrap {
+  padding: 0px;
+  margin: 0px;
+  text-align: justify;
+  position: relative;
+}
+
+.panel {
+  min-height: 100vh;
+  text-align: center;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex; 
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  -webkit-box-align: center;
+  align-items: center;
+  overflow: auto;
+}
+
+.panel img {
+  max-width: 50vw;
+  max-height: 75vh;
+  padding: 2%;
+}
+
+.landscape {
+  padding: 5% 10%
+}
+
+.align-left {
+    float:left;
+    margin-right:20px;
   }
 
-  @media (min-width: 1100px) and (min-height: 800px) {
-    html{
-      font-size: 24px;
-    }
-  }
+.align-right {
+  float:right;
+  margin-left:20px;
+}
 
-  h1, h2, h3, h4 {
-    margin: 0;
-  }
+.slide-in {
+  opacity:0;
+  transition:all .5s;
+}
 
-  body {
-    margin: 0;
-  }
+.align-left.slide-in {
+  transform:translateX(-30%) scale(0.95);
+}
+.align-right.slide-in {
+  transform:translateX(30%) scale(0.95);
+}
 
-   ul {
-    list-style-type: none;
-    display: inline-block;
-    padding: 0px;
-  }
+.slide-in.active {
+  opacity:1;
+  transform:translateX(0%) scale(1);
+}
 
+.logos img {
+  min-width: 6vw
+}
 
-  *, *:before, *:after {
-    box-sizing: inherit;
-  }
+.wide {
+  min-width: 80vw;
+}
 
-  a {
-    text-decoration: none;
-    cursor: pointer;
-  }
+.Intro {
 
- .site-wrap {
-    padding: 0px;
-    margin: 0px;
-    text-align: justify;
-  }
+  background: #07889B;
+  color: white;  
+}
+.Intro a,
+.Intro a:visited,
+.Intro a:hover,
+.Intro a:active {
+  color: #B6B6B6;
+}
 
-  .panel {
-    min-height: 100vh;
-    padding: 10%;
-    text-align: center;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex; 
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    -webkit-box-align: center;
-    align-items: center;
-    overflow: auto;
-  }
+.Dominion {
+  background: #66B9BF;
+  color: white;
+}
 
-  .panel img {
-    max-width: 50vw;
-    max-height: 75vh;
-    padding: 2%;
-  }
+.Dominion a,
+.Dominion a:visited,
+.Dominion a:hover,
+.Dominion a:active {
+  color: #07889B;
+}
 
-  .landscape {
-    padding: 5% 10%
-  }
+.Pulser {
+  background: #EEAA7B;
+  color: white;
+}
 
-  .align-left {
-      float:left;
-      margin-right:20px;
-    }
+.Pulser a,
+.Pulser a:visited,
+.Pulser a:hover,
+.Pulser a:active {
+  color: #E37222
+}
 
-  .align-right {
-    float:right;
-    margin-left:20px;
-  }
+.HacktivityMonitor{
+  color: #66B9BF;
+}
 
-  .slide-in {
-    opacity:0;
-    transition:all .5s;
-  }
+.HacktivityMonitor a,
+.HacktivityMonitor a:visited,
+.HacktivityMonitor a:hover,
+.HacktivityMonitor a:active{
+  color: #07889B;
+}
 
-  .align-left.slide-in {
-    transform:translateX(-30%) scale(0.95);
-  }
-  .align-right.slide-in {
-    transform:translateX(30%) scale(0.95);
-  }
+.OpenInvite {
+  background: #EEAA7B;
+  color: white;
+}
 
-  .slide-in.active {
-    opacity:1;
-    transform:translateX(0%) scale(1);
-  }
+.OpenInvite a,
+.OpenInvite a:visited,
+.OpenInvite a:hover,
+.OpenInvite a:active {
+  color: #E37222
+}
 
-  .logos img {
-    min-width: 6vw
-  }
+.FoodRunner {
+  background: #66B9BF;
+  color: white;
+}
 
-  .wide {
-    min-width: 80vw;
-  }
+.FoodRunner a,
+.FoodRunner a:visited,
+.FoodRunner a:hover,
+.FoodRunner a:active {
+  color: #07889B;
+}
 
-  .Intro {
+.Contact {
+  background: #07889B;
+  color: white;
+  padding: 15%
+}
 
-    background: #07889B;
-    color: white;  
-  }
-  .Intro a,
-  .Intro a:visited,
-  .Intro a:hover,
-  .Intro a:active {
-    color: #B6B6B6;
-  }
+.Contact a,
+.Contact a:visited,
+.Contact a:hover,
+.Contact a:active {
+  color: #B6B6B6;
+}
 
-  .Dominion {
-    background: #66B9BF;
-    color: white;
-  }
+.Contact a img {
+  min-width: 6vw
+}
 
-  .Dominion a,
-  .Dominion a:visited,
-  .Dominion a:hover,
-  .Dominion a:active {
-    color: #07889B;
-  }
+/* Link Highlighting */
 
-  .Pulser {
-    background: #EEAA7B;
-    color: white;
-  }
-
-  .Pulser a,
-  .Pulser a:visited,
-  .Pulser a:hover,
-  .Pulser a:active {
-    color: #E37222
-  }
-
-  .HacktivityMonitor{
-    color: #66B9BF;
-  }
-
-  .HacktivityMonitor a,
-  .HacktivityMonitor a:visited,
-  .HacktivityMonitor a:hover,
-  .HacktivityMonitor a:active{
-    color: #07889B;
-  }
-
-  .OpenInvite {
-    background: #EEAA7B;
-    color: white;
-  }
-  
-  .OpenInvite a,
-  .OpenInvite a:visited,
-  .OpenInvite a:hover,
-  .OpenInvite a:active {
-    color: #E37222
-  }
-  
-  .FoodRunner {
-    background: #66B9BF;
-    color: white;
-  }
-
-  .FoodRunner a,
-  .FoodRunner a:visited,
-  .FoodRunner a:hover,
-  .FoodRunner a:active {
-    color: #07889B;
-  }
-
-  .Contact {
-    background: #07889B;
-    color: white;
-    padding: 15%
-  }
-
-  .Contact a,
-  .Contact a:visited,
-  .Contact a:hover,
-  .Contact a:active {
-    color: #B6B6B6;
-  }
-
-  .Contact a img {
-    min-width: 6vw
-  }
+.highlight {
+  position: absolute;
+  transition: all 0.2s;
+  top:0;
+  z-index: 1;
+  background: rgba(0,0,0,0.1);
+  left:0;
+  border-radius:20px;
+  display: block;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2)
+}

@@ -1,3 +1,11 @@
+const sliderImages = document.querySelectorAll('.slide-in')
+window.addEventListener('scroll', debounce(checkSlide))
+
+const links = document.querySelectorAll('a')
+const highlight = document.createElement('span')
+highlight.classList.add('highlight')
+document.body.append(highlight)
+
 function debounce(func, wait = 40, immediate = true) {
     var timeout;
     return function() {
@@ -30,5 +38,25 @@ function debounce(func, wait = 40, immediate = true) {
     })
   }
 
-  const sliderImages = document.querySelectorAll('.slide-in')
-  window.addEventListener('scroll', debounce(checkSlide))
+  function highlightLink(){
+    // gives location of an item in window on page load
+    const linkCoords = this.getBoundingClientRect()
+    
+    // account for scroll in calculatedCoords
+    const calculatedCoords = {
+      width: linkCoords.width,
+      height: linkCoords.height,
+      left: linkCoords.left + window.scrollX,
+      top: linkCoords.top + window.scrollY,
+    }
+
+    highlight.style.width = `${calculatedCoords.width}px`
+    highlight.style.height = `${calculatedCoords.height}px`
+    highlight.style.transform = `translate(${calculatedCoords.left}px, ${calculatedCoords.top}px)`
+    console.log(highlight)
+
+  }
+
+  links.forEach(a => {
+    a.addEventListener('mouseenter', highlightLink)
+  })
